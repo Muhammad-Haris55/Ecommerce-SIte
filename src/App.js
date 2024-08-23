@@ -4,11 +4,9 @@ import { Route, Routes } from 'react-router-dom';
 import Menspage from "./Pages/Menspage"
 import Womenspage from './Pages/Womenspage';
 import Home from './Pages/Home'
-// import Mens from './Pages/Mens';
 import Cart from './Pages/Cart';
 import Navbar from './Pages/Navbar'
 import Footer from './Pages/Footer'
-// import Navbar from './Pages /Navbar';
 import Juniorspage from './Pages/Juniorspage';
 import Summersale from './Pages/Summersale';
 import Summercollection from './Pages/Summercollection';

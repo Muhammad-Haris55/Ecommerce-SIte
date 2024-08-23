@@ -1,12 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Quantitydecrease, Quantityincrease, Removeitem } from '../Store/CartSlice'
-import { getprice } from '../Pages/Cart'
 
 function Cartitem({ element }) {
-    // const [price, setprice] = useState(0)
-    // const Cart = useSelector((state) => state.Cart.items)
-
     const dispatch = useDispatch()
     const increment = (element) => {
         dispatch(Quantityincrease({ id: element.id, price: element.price }))

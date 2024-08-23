@@ -82,11 +82,6 @@ const slice = createSlice({
         items: [],
         price: 0
     },
-
-    // secondstate:{
-    //     price:0
-    // },
-
     // Reducer
     reducers: {
         // Action
@@ -103,30 +98,22 @@ const slice = createSlice({
                 state.price += Number.parseInt(action.payload.price)
             }
         },
-        // Will only get id
+        // Will only get id,price
         Removeitem(state, action) {
             const index = existingitem(state, action)
             if (index !== -1) {
                 state.items.splice(index, 1);
                 state.price-=Number.parseInt(action.payload.remprice)
             }
-            // // // console.log(index)
-            // const newarr = [...state.items]
-            // // // console.log(newarr)
-            // newarr.splice(index, 1)
-            // return state.items.splice(index,1)
-            // state.items.splice(action)
-            // console.log(action.payload.id)
-            // return state.items.filter((item) => (item.id !== action.payload.id))
         },
-        // Will only get id
+        // Will only get id,price
         Quantityincrease(state, action) {
             // console.log(action)
             const index = existingitem(state, action)
             state.items[index].quantity += 1
             state.price += Number.parseInt(action.payload.price)
         },
-        // Will only get id
+        // Will only get id,price
         Quantitydecrease(state, action) {
             const index = existingitem(state, action)
             state.items[index].quantity -= 1
